@@ -56,10 +56,10 @@ def result():
     if field[2][0] == 'O' and field[1][1] == 'O' and field[0][2] == 'O':
         o_wins += 1
 
-    if x_wins == 1 and o_wins == 0:
+    if x_wins == 1:
         print('X wins')
         end_game = True
-    if o_wins == 1 and x_wins == 0:
+    if o_wins == 1:
         print('O wins')
         end_game = True
     if x_wins == 0 and o_wins == 0 and sum(x.count(' ') for x in field) == 0:
