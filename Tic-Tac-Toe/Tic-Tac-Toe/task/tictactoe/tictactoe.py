@@ -1,4 +1,3 @@
-
 field = [[' ',' ',' '],
          [' ',' ',' '],
          [' ',' ',' ']]
@@ -57,21 +56,17 @@ def result():
     if field[2][0] == 'O' and field[1][1] == 'O' and field[0][2] == 'O':
         o_wins += 1
 
-    # if abs(sum(x.count('X') for x in field) - sum(x.count('O') for x in field)) > 1:
-    #     print('Impossible')
-    # elif (x_wins == 1 and o_wins == 1) or (x_wins > 1 or o_wins > 1):
-    #     print('Impossible')
-    elif x_wins == 1 and o_wins == 0:
+    if x_wins == 1 and o_wins == 0:
         print('X wins')
         end_game = True
-    elif o_wins == 1 and x_wins == 0:
+    if o_wins == 1 and x_wins == 0:
         print('O wins')
         end_game = True
-    elif x_wins == 0 and o_wins == 0 and sum(x.count(' ') for x in field) == 0:
+    if x_wins == 0 and o_wins == 0 and sum(x.count(' ') for x in field) == 0:
         print('Draw')
         end_game = True
-    # elif x_wins == 0 and o_wins == 0 and sum(x.count(' ') for x in field) > 0:
-    #     print('Game not finished')
+    if x_wins == 0 and o_wins == 0 and sum(x.count(' ') for x in field) > 0:
+        print('Game not finished')
 
 
 print_field()
@@ -79,7 +74,7 @@ end_game = False
 
 while end_game is False:
 
-    coordinates = input('Choose coordinates')
+    coordinates = input('Choose coordinates: ')
 
     while coordinates[0].isnumeric() is False or coordinates[-1].isnumeric() is False:
         print('You should enter numbers!')
