@@ -1,5 +1,3 @@
-# write your code here
-
 field = [[' ',' ',' '],
          [' ',' ',' '],
          [' ',' ',' ']]
